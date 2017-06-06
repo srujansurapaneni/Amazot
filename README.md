@@ -2,6 +2,7 @@
 Code for an automated servebot that chats with you regarding the specs of the ec2 instance that you want to deploy and deploys the instance automatically upon approval
 
 User Input:
+
 1. User opens the chat window and asks for instance creation
 "Hello xxx, I'd like to create an instance"
 2. Lex responds back with more questions about the instance type and other questions
@@ -9,6 +10,7 @@ User Input:
 3. FInally after all the prompts, Lex executes a lamda function to create a .txt file with all the user requirements and sends out the text file to the admin
 
 Admin creation of instances:
+
 4. Admin receives the .txt file with user information and user requirements for the instance and see if it's approved/ not approved
 5. Admin opens the chat window and enters ask for instance creation
 "Hello xxx, please create the following instances -instance type ......"
