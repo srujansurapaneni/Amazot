@@ -8,4 +8,4 @@
 7. sudo make altinstall
 8.wget https://bootstrap.pypa.io/get-pip.py
 9.sudo python2.7 get-pip.py
-10.pip2.7 install virtualen
+10.pip2.7 install virtualenv
