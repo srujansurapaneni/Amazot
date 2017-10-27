@@ -6,3 +6,6 @@
 5. ./configure
 6. make
 7. make altinstall
+8.wget https://bootstrap.pypa.io/get-pip.py
+9.python2.7 get-pip.py
+10.pip2.7 install virtualen
