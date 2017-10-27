@@ -1,11 +1,11 @@
-0. yum install wget
+0. sudo yum install wget
 1. wget http://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
 2. tar -zxvf Python-2.7.14.tgz
 3. cd Python-2.7.14
-4. yum install gcc* -y
+4. sudo yum install gcc* -y
 5. ./configure
 6. make
-7. make altinstall
+7. sudo make altinstall
 8.wget https://bootstrap.pypa.io/get-pip.py
-9.python2.7 get-pip.py
+9.sudo python2.7 get-pip.py
 10.pip2.7 install virtualen
