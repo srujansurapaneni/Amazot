@@ -1,3 +1,6 @@
+Env set-up:
+-----------
+
 0.  sudo yum install wget
 1.  wget http://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
 2.  tar -zxvf Python-2.7.14.tgz
@@ -9,3 +12,23 @@
 8.  wget https://bootstrap.pypa.io/get-pip.py
 9.  sudo python2.7 get-pip.py
 10. sudo pip2.7 install virtualenv
+
+virtualenv setup:
+-----------------
+
+1.  virtualenv amazot
+2.  source amazot/bin/activate
+3.  sudo pip install slackclient
+
+after slack bot creation
+
+4.  export SLACK_BOT_TOKEN='your slack token pasted here'
+
+edit print_bot_id.py to add token id and bot name
+
+5.  python print_bot_id.py
+
+If the abve doesn't work, then do "easy_install slackclient"
+
+6.  export BOT_ID='bot id returned by script'
+7.  python starterbot.py
