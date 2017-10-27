@@ -5,4 +5,4 @@
 4. yum install gcc* -y
 5. ./configure
 6. make
-7. make install
+7. make altinstall
