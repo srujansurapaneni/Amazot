@@ -31,4 +31,4 @@ edit print_bot_id.py to add token id and bot name
 If the abve doesn't work, then do "easy_install slackclient"
 
 6.  export BOT_ID='bot id returned by script'
-7.  python amazot.py
+7.  sudo nohup python amazot.py &
