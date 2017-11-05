@@ -1,34 +1,67 @@
-Env set-up:
------------
+#Env set-up:
+#-----------
 
-0.  sudo yum install wget
-1.  wget http://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
-2.  tar -zxvf Python-2.7.14.tgz
-3.  cd Python-2.7.14
-4.  sudo yum install gcc* -y
-5.  ./configure
-6.  make
-7.  sudo make install
-8.  wget https://bootstrap.pypa.io/get-pip.py
-9.  sudo python2.7 get-pip.py
-10. sudo pip2.7 install virtualenv
+#install yum
 
-virtualenv setup:
------------------
+ sudo yum install wget
+ 
+#install python 2.7.14
 
-1.  virtualenv amazot
-2.  source amazot/bin/activate
-3.  sudo pip install slackclient
+ wget http://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
+ tar -zxvf Python-2.7.14.tgz
+ cd Python-2.7.14
+ sudo yum install gcc* -y
+ ./configure
+ make
+ sudo make install
 
-after slack bot creation
+#change bash file configuration to add python2.7 to path 
 
-4.  export SLACK_BOT_TOKEN='your slack token pasted here'
+ls -a ~
+#add the below to the profile script from above
+export PATH=~/.local/bin:$PATH
 
-edit print_bot_id.py to add token id and bot name
+#load profile to current session
 
-5.  python print_bot_id.py
+source ~/.bash_profile
 
-If the abve doesn't work, then do "easy_install slackclient"
+#install PIP
 
-6.  export BOT_ID='bot id returned by script'
-7.  sudo nohup python amazot.py &
+ wget https://bootstrap.pypa.io/get-pip.py
+ sudo python2.7 get-pip.py
+#sudo pip2.7 install virtualenv
+
+#virtualenv setup:
+#-----------------
+
+#virtualenv amazot
+#source amazot/bin/activate
+ 
+#install slackclient
+
+ sudo pip install slackclient
+
+#after slack bot creation export the slack token
+
+ export SLACK_BOT_TOKEN='your slack token pasted here'
+
+#edit print_bot_id.py to add token id and bot name
+
+ python print_bot_id.py
+
+#If the above doesn't work, then do "easy_install slackclient"
+
+#export BOT_ID interactively to associate slack to application
+
+ export BOT_ID='bot id returned by script'
+
+#run amazot in the background
+
+sudo nohup python amazot.py &
+
+#add user and password
+useradd sysuser
+passwd sysuser
+#add user to sudoers
+visudo
+sysuser ALL=ALL NOPASSWD=ALL
