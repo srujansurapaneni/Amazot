@@ -65,3 +65,9 @@ passwd sysuser
 #add user to sudoers
 visudo
 sysuser ALL=ALL NOPASSWD=ALL
+
+#enable password authentication
+/etc/ssh/.sshd_config
+#change password authentication to 'yes'
+#restart sshd sshd service
+sshd restart
