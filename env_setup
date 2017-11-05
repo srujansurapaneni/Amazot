@@ -8,7 +8,7 @@ Env set-up:
 4.  sudo yum install gcc* -y
 5.  ./configure
 6.  make
-7.  sudo make altinstall
+7.  sudo make install
 8.  wget https://bootstrap.pypa.io/get-pip.py
 9.  sudo python2.7 get-pip.py
 10. sudo pip2.7 install virtualenv
