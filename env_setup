@@ -57,7 +57,7 @@ source ~/.bash_profile
 
 #run amazot in the background
 
-sudo nohup python amazot.py &
+sudo nohup python amazot.py&
 
 #add user and password
 useradd sysuser
