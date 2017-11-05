@@ -1,7 +1,7 @@
 #Env set-up:
 #-----------
 
-#install yum
+#install wget
 
  sudo yum install wget
  
@@ -70,4 +70,4 @@ sysuser ALL=ALL NOPASSWD=ALL
 /etc/ssh/.sshd_config
 #change password authentication to 'yes'
 #restart sshd sshd service
-sshd restart
+systemctl restart sshd
