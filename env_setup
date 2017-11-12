@@ -100,3 +100,10 @@ sysuser ALL=ALL NOPASSWD=ALL
 #change password authentication to 'yes'
 #restart sshd sshd service
 systemctl restart sshd
+
+#python packages required:
+--------------------------
+
+numpy
+
+
