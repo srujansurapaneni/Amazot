@@ -9,9 +9,15 @@
 #install python 2.7.14
 
  wget http://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
+ or 
+ wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz
  tar -zxvf Python-2.7.14.tgz
+ or
+ tar -zxvf Python-3.6.3.tgz
  yum install gcc* zlib zlib-devel openssl-devel -y
  cd Python-2.7.14
+ or
+ cd Python-3.6.3
  ./configure
  cd Modules
  vim Setup
@@ -93,7 +99,7 @@ useradd sysuser
 passwd sysuser
 #add user to sudoers
 visudo
-sysuser ALL=ALL NOPASSWD=ALL
+sysuser ALL=ALL NOPASSWD:ALL
 
 #enable password authentication
 /etc/ssh/.sshd_config
